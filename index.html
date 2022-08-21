@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Ernold Silva - Desenvolvedor Web</title>
+</head>
+<body>
+
+    <div class="cartao"> <!-- Inicio tela de perfil -->
+        <div class="cartaoImg">
+            <img src="style/img/ernold.jpeg">
+        </div>
+         <div class="conteudo">
+            <div class="informacoes">
+                <h2>Ernold Silva<br><span>Desenvolvedor Web - Front-end</span></h2>
+                <div class="dados">
+                    <h3>0<br><span>Posts</span></h3>
+                    <h3>0<br><span>Seguidores</span></h3>
+                    <h3>0<br><span>Seguindo</span></h3>
+                </div>
+                <div class="botaoAcao">
+                    <button>Seguir</button>
+                    <button>Mensagem</button>
+                </div>
+            </div>
+         </div>
+    </div>
+    </div> <!-- Final tela de perfil-->
+
+    <div class="abaNavegacao"><!-- Inicio aba de navegação -->
+        <div class="usuario">
+            <div class="usuarioImg">
+                <img src="style/img/ernold.jpeg">
+            </div>
+            <p class="usuarioNome">Ernold Silva</p>
+        </div>
+        <div class="menu"></div>
+        <ul class="submenu">
+            <li><a href="index.html" target="_blank"><ion-icon name="person-outline"></ion-icon> Sobre Mim</a></li>
+            <li><a href="https://wa.me/82987060616" target="_blank"><ion-icon name="logo-whatsapp"></ion-icon> Whatsapp</a></li>
+            <li><a href="https://github.com/ernolddesenvolve" target="_blank"><ion-icon name="logo-github"></ion-icon> GitHub</a></li>
+            <li><a href="https://www.instagram.com/devernoldsilva/" target="_blank"><ion-icon name="logo-instagram"></ion-icon> Instagram</a></li>
+        </ul>
+    </div> <!-- Final aba de navegação -->
+
+    <!-- Biblioteca de icones abaixo: -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Script da aba de navegação abaixo: -->
+    <script>
+        let menu = document.querySelector('.menu');
+        let abaNavegacao = document.querySelector('.abaNavegacao');
+        menu.onclick = function(){
+            abaNavegacao.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

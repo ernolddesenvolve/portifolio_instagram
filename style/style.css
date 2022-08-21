@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #2E2C2F;
+}
+
+/* inicio tela de perfil */.cartao{
+    position: relative;
+    width: 350px;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+    transition: 0.5s;
+}
+
+.cartaoImg{
+    position: absolute;
+    left: 50%;
+    top: -50%;
+    transform: translate(-50%);
+    width: 250px;
+    height: 250px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+    overflow: hidden;
+    transition: 0.5s;
+    margin-top: 190px;
+}
+
+.cartao:hover .cartaoImg{
+    width: 250px;
+    height: 250px;
+}
+
+.cartaoImg img{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cartao .conteudo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.cartao .conteudo .informacoes{
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.cartao .conteudo .informacoes h2{
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.2em;
+}
+
+.cartao .conteudo .informacoes h2 span{
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0.5;
+}
+
+.cartao .conteudo .informacoes .dados{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.cartao .conteudo .informacoes .dados h3{
+    font-size: 1em;
+    color: #555;
+    line-height: 1.2em;
+    font-weight: 600;
+}
+
+.cartao .conteudo .informacoes .dados h3 span{
+    font-size: 0.85em;
+    font-weight: 400;
+    opacity: 0.5;
+}
+
+.cartao .conteudo .informacoes .botaoAcao{
+    display: flex;
+    justify-content: space-between;
+    /* gap: 20px; */
+}
+
+.cartao .conteudo .informacoes .botaoAcao button{
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: 500;
+    background: #32CD32;
+    color: #fff;
+    cursor: pointer;
+}
+
+.cartao .conteudo .informacoes .botaoAcao button:nth-child(2){
+    border: 1px solid #999;
+    color: #999;
+    background: #fff;
+} /* final tela de perfil*/
+
+/* inicio aba de navegação */.abaNavegacao{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 120px;
+    height: 60px;
+    background: #fff;
+    box-shadow: 0 25px 35px rgba(0,0,0,0.1);
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    transition: height 0.5s, width 0.5s;
+    transition-delay: 0s, 0.75s;
+}
+
+.abaNavegacao.active{
+    width: 300px;
+    height: 260px;
+    transition: width 0.5s, height 0.5s;
+    transition-delay: 0s, 0.75s;
+}
+
+.abaNavegacao .usuario{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.abaNavegacao.active .usuario{
+    width: calc(100% - 60px);
+    transition-delay: 0s;
+}
+
+.abaNavegacao .usuario .usuarioNome{
+    white-space: nowrap;
+    color: #555;
+    font-size: 1.1em;
+}
+
+.abaNavegacao .usuario .usuarioImg{
+    position: relative;
+    min-width: 60px;
+    overflow: hidden;
+    height: 60px;
+    background: #000;
+    border-radius: 50%;
+    border: 10px solid #fff;
+}
+
+.abaNavegacao .usuario .usuarioImg img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.abaNavegacao .menu{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.abaNavegacao .menu::before{
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 2px;
+    background: #555;
+    transform: translateY(-10px);
+    box-shadow: 0 10px #555;
+    transition: 0.5s;
+}
+
+.abaNavegacao .menu::after{
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 2px;
+    background: #555;
+    transform: translateY(10px);
+    transition: 0.5s;
+}
+
+.abaNavegacao.active .menu::before{
+    transform: translateY(0px) rotate(45deg);
+    box-shadow: 0 0 #555;
+}
+
+.abaNavegacao.active .menu::after{
+    transform: translateY(0px) rotate(-45deg); 
+}
+
+.submenu{
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 60px);
+    margin-top: 60px;
+    padding: 20px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.submenu li{
+    list-style: none;
+}
+
+.submenu li a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    font-size: 1em;
+    text-decoration: none;
+    color: #555;
+}
+
+.submenu li a:hover{
+    color: #32CD32;
+}
+
+/* Final aba navegação */.submenu li a ion-icon{
+    font-size: 1.5em;
+}
